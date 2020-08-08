@@ -1,3 +1,5 @@
+package cmd
+
 /*
 Copyright © 2020 kemokemo <t2wonderland@gmail.com>
 
@@ -19,10 +21,34 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-package main
 
-import "github.com/kemokemo/colout/cmd"
+import (
+	"os"
 
-func main() {
-	cmd.Execute()
+	"github.com/spf13/cobra"
+)
+
+// warnCmd represents the warn command
+var warnCmd = &cobra.Command{
+	Use:   "warn",
+	Short: "colored yellow output",
+	Long: `The text got from the standard input or args is colored yellow to indicate warning,
+and then output to the standard output.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		coloredOutput(out, os.Stdin, args, warnColor.FprintFunc())
+	},
+}
+
+func init() {
+	rootCmd.AddCommand(warnCmd)
+
+	// Here you will define your flags and configuration settings.
+
+	// Cobra supports Persistent Flags which will work for this command
+	// and all subcommands, e.g.:
+	// warnCmd.PersistentFlags().String("foo", "", "A help for foo")
+
+	// Cobra supports local flags which will only run when this command
+	// is called directly, e.g.:
+	// warnCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

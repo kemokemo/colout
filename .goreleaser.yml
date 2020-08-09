@@ -1,0 +1,39 @@
+project_name: colout
+env:
+  - GO111MODULE=on
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - main: .
+    binary: colout
+    ldflags:
+      - -s -w
+      - -X github.com/kemokemo/colout/cmd.Revision={{.ShortCommit}}
+    env:
+      - CGO_ENABLED=0
+archives:
+  - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
+    replacements:
+      darwin: darwin
+      linux: linux
+      windows: windows
+      386: i386
+      amd64: x86_64
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - README.md
+      - LICENSE
+release:
+  prerelease: auto
+
+brews:
+  - description: "A small and simple CLI tool that makes it easy to use colored output."
+    github:
+      owner: kemokemo
+      name: homebrew-tap
+    homepage: "https://github.com/kemokemo/colout"
+    install: |
+      bin.install "colout"

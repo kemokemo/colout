@@ -34,6 +34,7 @@ archives:
     files:
       - README.md
       - LICENSE
+      - media/*
 release:
   prerelease: auto
 

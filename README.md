@@ -1,6 +1,6 @@
 # colout (colored output tool)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![codecov](https://codecov.io/gh/kemokemo/colout/branch/master/graph/badge.svg)](https://codecov.io/gh/kemokemo/colout) [![Go Report Card](https://goreportcard.com/badge/github.com/kemokemo/colout)](https://goreportcard.com/report/github.com/kemokemo/colout)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Go Report Card](https://goreportcard.com/badge/github.com/kemokemo/colout)](https://goreportcard.com/report/github.com/kemokemo/colout)
 
 A small and simple CLI tool that makes it easy to use colored output in scripts and other applications.
 

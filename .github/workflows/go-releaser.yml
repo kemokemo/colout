@@ -22,6 +22,7 @@ jobs:
            go version
            GO111MODULE=off go get -u golang.org/x/lint/golint
       - name: Lint and check
+        run: |
            golint ./...
            go vet ./...
       - name: Run GoReleaser

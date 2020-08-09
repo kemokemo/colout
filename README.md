@@ -4,6 +4,26 @@
 
 A small and simple CLI tool that makes it easy to use colored output in scripts and other applications.
 
+![sample](media/sample.png)
+
+## How to install
+
+### Homebrew
+
+```sh
+brew install kemokemo/tap/colout
+```
+
+### Build yourself
+
+```sh
+go get github.com/kemokemo/colout
+```
+
+### Binary
+
+Download from [the release page](https://github.com/kemokemo/colout/releases/latest), unpack the archive and put the binary somewhere in your `PATH`.
+
 ## Usage
 
 ```sh
@@ -90,18 +110,6 @@ if %errorlevel% == 0 (
 ) 
 ```
 </details>
-
-## Install
-
-### Binary
-
-Get the latest version from [the release page](https://github.com/kemokemo/colout/releases/latest), and download the archive file for your operating system/architecture. Unpack the archive, and put the binary somewhere in your $PATH.
-
-### Build yourself
-
-```sh
-go get github.com/kemokemo/colout
-```
 
 ## License
 

@@ -8,7 +8,7 @@ A small and simple CLI tool that makes it easy to use colored output in scripts 
 
 ```sh
 $ colout -h
-colored output tool
+A CLI tool that makes it easy to use colored output.
 
 Usage:
   colout [command]
@@ -18,6 +18,7 @@ Available Commands:
   help        Help about any command
   info        colored blue output
   success     colored green output
+  version     Print the version number
   warn        colored yellow output
 
 Flags:

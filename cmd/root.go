@@ -29,13 +29,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var cfgFile string
-
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "colout",
-	Short: "colored output tool",
-	Long:  `colored output tool`,
+	Short: "A CLI tool that makes it easy to use colored output.",
+	Long:  `A CLI tool that makes it easy to use colored output.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

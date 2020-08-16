@@ -21,6 +21,6 @@ var versionCmd = &cobra.Command{
 	Short: "Print the version number",
 	Long:  `All software has versions. This is colout's`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("colout: A CLI tool that makes it easy to use colored output.\n Version : %s\n Revision: %s\n", Version, Revision)
+		fmt.Printf("colout: It's a simple and tiny tool for getting colored output in scripts.\n Version : %s\n Revision: %s\n", Version, Revision)
 	},
 }

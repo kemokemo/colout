@@ -32,8 +32,8 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "colout",
-	Short: "A CLI tool that makes it easy to use colored output.",
-	Long:  `A CLI tool that makes it easy to use colored output.`,
+	Short: "It's a simple and tiny tool for getting colored output in scripts. ",
+	Long:  "It's a simple and tiny tool for getting colored output in scripts. ",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

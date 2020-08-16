@@ -1,28 +1,10 @@
 # colout (colored output tool)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Go Report Card](https://goreportcard.com/badge/github.com/kemokemo/colout)](https://goreportcard.com/report/github.com/kemokemo/colout)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Go Report Card](https://goreportcard.com/badge/github.com/kemokemo/colout)](https://goreportcard.com/report/github.com/kemokemo/colout) [![Powered By: GoReleaser](https://img.shields.io/badge/powered%20by-goreleaser-green.svg?style=flat-square)](https://github.com/goreleaser)
 
-A small and simple CLI tool that makes it easy to use colored output in scripts and other applications.
+It's a simple and tiny tool for getting colored output in scripts.
 
 ![sample](media/sample.png)
-
-## How to install
-
-### Homebrew
-
-```sh
-brew install kemokemo/tap/colout
-```
-
-### Build yourself
-
-```sh
-go get github.com/kemokemo/colout
-```
-
-### Binary
-
-Download from [the release page](https://github.com/kemokemo/colout/releases/latest), unpack the archive and put the binary somewhere in your `PATH`.
 
 ## Usage
 
@@ -49,67 +31,80 @@ Use "colout [command] --help" for more information about a command.
 
 ## Examples
 
-### Both args and pipe are available
+### Both args and standard input are available
 
-The following two samples both have the same output.
+The subcommands specify the color, and the wording is passed as an argument or standard input.
 
 ```sh
-colout info "Hey! What's up?"
+colout success "Successfully done."
 ```
 
 ```sh
-echo "Hey! What's up?" | colout info
+echo "Successfully done." | colout success
 ```
+
+All of the above examples result in the following output.
+
+![sample-outout](media/sample-output.png)
 
 ### Shell script
-
-<details>
 
 ```sh
 #!/bin/bash
 
-dosomething
+# do-your-work
 
 if [ $? = 0 ]; then
-  colout success "successfully done!"
+  colout success "Successfully done."
 else
-  colout error "failed to run 'dosomething'."
+  colout error "An error has occurred."
 fi
 ```
-</details>
 
 ### Power shell
 
-<details>
-
 ```sh
-dosomething
+# do-your-work
 
 if ( $? ){
-  colout success "successfully done!"
+  colout success "Successfully done."
 }
 else {
-  colout error "failed to run 'dosomething'."
+  colout error "An error has occurred."
 }
 ```
-</details>
 
 ### Windows batch
-
-<details>
 
 ```sh
 @echo off
 
-dosomething
+rem do-your-work
 
 if %errorlevel% == 0 (
-  colout success "successfully done!"
+  colout success "Successfully done."
 ) else (
-  colout error "failed to run 'dosomething'."
+  colout error "An error has occurred."
 ) 
 ```
-</details>
+
+## How to install
+
+### Homebrew
+
+```sh
+brew install kemokemo/tap/colout
+```
+
+### Build yourself
+
+```sh
+go get github.com/kemokemo/colout
+```
+
+### Binary
+
+Download from [the release page](https://github.com/kemokemo/colout/releases/latest), unpack the archive and put the binary somewhere in your `PATH`.
 
 ## License
 

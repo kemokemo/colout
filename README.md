@@ -1,6 +1,6 @@
 # colout (colored output tool)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Go Report Card](https://goreportcard.com/badge/github.com/kemokemo/colout)](https://goreportcard.com/report/github.com/kemokemo/colout)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Go Report Card](https://goreportcard.com/badge/github.com/kemokemo/colout)](https://goreportcard.com/report/github.com/kemokemo/colout) [![Powered By: GoReleaser](https://img.shields.io/badge/powered%20by-goreleaser-green.svg?style=flat-square)](https://github.com/goreleaser)
 
 It's a simple and tiny tool for getting colored output in scripts.
 

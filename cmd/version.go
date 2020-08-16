@@ -7,7 +7,7 @@ import (
 )
 
 // Version is semantic version of this app.
-const Version string = "0.1.0"
+const Version string = "0.1.1"
 
 // Revision is the revision of this app's binary.
 var Revision = "unset"

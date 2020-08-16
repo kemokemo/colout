@@ -96,6 +96,20 @@ if %errorlevel% == 0 (
 brew install kemokemo/tap/colout
 ```
 
+### Scoop
+
+First, add my scoop-bucket.
+
+```sh
+scoop bucket add kemokemo-bucket https://github.com/kemokemo/scoop-bucket.git
+```
+
+Next, install this app by running the following.
+
+```sh
+scoop install colout
+```
+
 ### Build yourself
 
 ```sh
